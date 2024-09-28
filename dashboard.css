@@ -1,0 +1,158 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --default: #06adf1;
+    --border: #d3d3d7;
+    --background-blue: #eff9ff;
+    --view-background: #dff3ff;
+    --view-text: #1fbfff;
+    --some-green: #7affb4;
+    --some-red: #ff1f1f;
+    --update-background: #fefce8;
+    --update-text: #ffce1f;
+    --delete-background: #fff1f1;
+    --delete-text: #ff6464;
+}
+
+body {
+    padding: 1rem;
+    background-color: var(--background-blue);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    height: 10vh;
+    width: auto;
+}
+
+.header button {
+    background-color: var(--default);
+    color: white;
+    width: 6vw;
+    font-size: 14px;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.content .search-controls {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.content .search-controls input {
+    font-size: 14px;
+    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.content .search-controls input::-webkit-outer-spin-button,
+.content .search-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.content .search-controls input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.content .search-controls button {
+    background-color: var(--default);
+    color: white;
+    font-size: 14px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.content .table-container {
+    width: 95vw;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 72vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.content .table-container thead,
+.content .table-container tbody tr {
+    border-bottom: 1px solid var(--border);
+}
+
+.content .table-container tbody {
+    display: block;
+    max-height: calc(65vh - 20px);
+    overflow: auto;
+}
+
+.content .table-container thead,
+.content .table-container tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.content .table-container thead {
+    width: 100%;
+}
+
+.content .table-container thead.has-scrollbar {
+    width: calc(100% - 1em);
+}
+
+.content .table-container table {
+    width: 100%;
+}
+
+.content .table-container table td .data-raw-image,
+.content .table-container table td .data-annotated-image {
+    height: 10vh;
+    width: auto;
+}
+
+.content .table-container table td .data-control {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.content .table-container table td .data-control#view {
+    background-color: var(--view-background);
+    color: var(--view-text);
+    border: 1px solid var(--view-text);
+}
+
+.content .table-container table td .data-control#update {
+    background-color: var(--update-background);
+    color: var(--update-text);
+    border: 1px solid var(--update-text);
+}
+
+.content .table-container table td .data-control#delete {
+    background-color: var(--delete-background);
+    color: var(--delete-text);
+    border: 1px solid var(--delete-text);
+}

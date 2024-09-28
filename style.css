@@ -1,0 +1,80 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --default: #06adf1;
+    --border: #d3d3d7;
+    --background-blue: #eff9ff;
+}
+
+body {
+    background-color: var(--background-blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 20vw;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.25rem;
+    border: 1px solid var(--border);
+    font-size: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+span {
+    font-size: calc(1rem + 4px);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.login-card label.credentials {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.login-card input.credentials {
+    font-size: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+}
+
+#username {
+    margin-bottom: 1.5rem;
+}
+
+#password {
+    margin-bottom: 0.5rem;
+}
+
+.password-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+#login {
+    padding: 1rem;
+    background-color: var(--default);
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+}
